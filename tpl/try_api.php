@@ -21,3 +21,5 @@ $paneContent = <<<EOP
 EOP;
 
 echo GDT_Panel::make()->html($paneContent);
+
+echo GDT_Panel::make()->html(t('geoapi_coming_soon'));
