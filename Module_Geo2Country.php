@@ -6,6 +6,8 @@ use GDO\UI\GDT_Link;
 
 final class Module_Geo2Country extends GDO_Module
 {
+    public function defaultEnabled() { return false; }
+    
     public function onLoadLanguage() { return $this->loadLanguage('lang/geo2country'); }
     
     public function hookTopBar(GDT_Bar $bar)
