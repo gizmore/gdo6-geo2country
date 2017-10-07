@@ -1,7 +1,7 @@
 <?php
 namespace GDO\Geo2Country;
 use GDO\Core\GDO_Module;
-use GDO\Template\GDT_Bar;
+use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Link;
 
 final class Module_Geo2Country extends GDO_Module
@@ -17,6 +17,9 @@ final class Module_Geo2Country extends GDO_Module
     
     public function onIncludeScripts()
     {
-        $this->addJavascript('js/g2c-api-ctrl.js');
+        if (module_enabled('Angular'))
+        {
+            $this->addJavascript('js/g2c-api-ctrl.js');
+        }
     }
 }
