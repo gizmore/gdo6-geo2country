@@ -1,9 +1,17 @@
 <?php
 namespace GDO\Geo2Country;
+
 use GDO\Core\GDO_Module;
 use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Link;
+use GDO\UI\GDT_Page;
 
+/**
+ * Demo site for converting geoposition to country.
+ * @author gizmore
+ * @version 6.10
+ * @since 6.06
+ */
 final class Module_Geo2Country extends GDO_Module
 {
 	public function isSiteModule() { return true; }
@@ -12,9 +20,10 @@ final class Module_Geo2Country extends GDO_Module
     
     public function onLoadLanguage() { return $this->loadLanguage('lang/geo2country'); }
     
-    public function hookTopBar(GDT_Bar $bar)
+    public function onInitSidebar()
     {
-        $bar->addField(GDT_Link::make('link_geo2ctry_try_api')->href(href('Geo2Country', 'TryApi')));
+        GDT_Page::$INSTANCE->topNav->addField(
+            GDT_Link::make('link_geo2ctry_try_api')->href(href('Geo2Country', 'TryApi')));
     }
     
     public function onIncludeScripts()
