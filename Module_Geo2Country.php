@@ -2,7 +2,6 @@
 namespace GDO\Geo2Country;
 
 use GDO\Core\GDO_Module;
-use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Link;
 use GDO\UI\GDT_Page;
 
