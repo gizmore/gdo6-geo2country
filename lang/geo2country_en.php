@@ -1,5 +1,6 @@
 <?php
 return array(
+'mtitle_geo2country_tryapi' => 'API - Geo2C',
 'link_geo2ctry_try_api' => 'Try the API',
 'btn_your_location' => 'Try your own detected location',
 'pick_position' => 'Pick a location',
