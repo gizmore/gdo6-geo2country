@@ -13,7 +13,7 @@ use GDO\Core\Application;
  * @link https://geo2country.gizmore.org
  * 
  * @author gizmore
- * @version 6.10.1
+ * @version 6.10.2
  * @since 6.6.0
  */
 final class Module_Geo2Country extends GDO_Module
@@ -22,14 +22,18 @@ final class Module_Geo2Country extends GDO_Module
     
 	public function isSiteModule() { return true; }
 	
-	public function getDependencies() { return ['CountryCoordinates', 'Material', 'News']; }
+	public function getDependencies()
+	{
+	    return ['CountryCoordinates', 'Material', 'News'];
+	}
     
     public function onLoadLanguage() { return $this->loadLanguage('lang/geo2country'); }
     
     public function onInitSidebar()
     {
         GDT_Page::$INSTANCE->topNav->addField(
-            GDT_Link::make('link_geo2ctry_try_api')->href(href('Geo2Country', 'TryApi')));
+            GDT_Link::make('link_geo2ctry_try_api')->href(
+                href('Geo2Country', 'TryApi')));
     }
     
     public function onIncludeScripts()
