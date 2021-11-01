@@ -43,7 +43,7 @@ final class Module_Geo2Country extends GDO_Module
             if (Module_Angular::instance()->cfgIncludeScripts() ||
                 Application::instance()->hasTheme('material'))
             {
-                $this->addJavascript('js/g2c-api-ctrl.js');
+                $this->addJS('js/g2c-api-ctrl.js');
             }
         }
     }
