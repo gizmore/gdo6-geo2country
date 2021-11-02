@@ -24,7 +24,11 @@ final class Module_Geo2Country extends GDO_Module
 	
 	public function getDependencies()
 	{
-	    return ['CountryCoordinates', 'Material', 'News'];
+	    return [
+	    	'CountryCoordinates',
+	    	'Material',
+	    	'News',
+	    ];
 	}
     
     public function onLoadLanguage() { return $this->loadLanguage('lang/geo2country'); }
